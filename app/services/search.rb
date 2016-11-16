@@ -11,7 +11,7 @@ class Search
     store_results
   end
 
-  def get_page
+  def get_page url
     @page =  @mechanize.get(url)    
     # page.search('h1')
     rescue Exception => e
