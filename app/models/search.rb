@@ -15,6 +15,6 @@ class Search < ApplicationRecord
 
   private
   def scrape_page
-    ScrapeJob.perform_later search_id
+    ScrapeJob.perform_later self.id
   end
 end
