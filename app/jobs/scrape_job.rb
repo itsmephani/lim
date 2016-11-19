@@ -1,7 +1,7 @@
 class ScrapeJob < ApplicationJob
   queue_as :default
 
-  def perform(search_id)
-    Scrape.new search_id
+  def perform(history_id)
+    Scrape.new history_id
   end
 end

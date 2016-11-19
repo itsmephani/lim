@@ -1,5 +1,5 @@
 module Api
   class ResultsController < CrudController
-    self.nesting = Search
+    self.nesting = History
   end
 end

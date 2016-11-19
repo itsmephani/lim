@@ -14,21 +14,22 @@ ActiveRecord::Schema.define(version: 20161117171723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
+
+  create_table "histories", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "results", force: :cascade do |t|
     t.string   "content"
     t.string   "tag_name"
-    t.string   "link"
-    t.integer  "search_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["search_id"], name: "index_results_on_search_id", using: :btree
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.hstore   "tag_attributes", default: {}
+    t.integer  "history_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["history_id"], name: "index_results_on_history_id", using: :btree
   end
 
 end
