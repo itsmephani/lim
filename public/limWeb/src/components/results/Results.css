@@ -1,0 +1,14 @@
+.Results.hasResults {
+  background: whitesmoke;
+  margin-left: 45px;
+  padding: 15px;
+}
+
+.Results li {
+  cursor: default;
+}
+
+.Results li:hover {
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,38 @@
+input {
+  border: 2px solid whitesmoke;
+  border-radius: 4px;
+  height: 20px;
+  min-width: 250px;
+  outline: none;
+  padding: 5px 10px;
+}
+
+button {
+  background-color: #3BB0F9;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;  
+  font-size: 14px;
+  padding: 10px 15px;
+  transition: all 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+
+li:hover, li.active {
+  color: white;
+  background-color: #009688;
+}
