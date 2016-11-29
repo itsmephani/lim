@@ -7,6 +7,7 @@ LIM
 3. Install redis-server and start
 4. rails s
 5. bundle exec sidekiq # need to start sidekiq for processing(scraping) url in background.
+6. bundle exec rspec # run test case (scrape results shouldn't be empty).
 
 
 
@@ -26,3 +27,7 @@ history: {url: 'https://github.com/'}
 
 ## Scrape ##
 app/services/scrap.rb has the functionality of scraping.
+
+
+## UI - Reactjs ##
+Code exists in public/limWeb
