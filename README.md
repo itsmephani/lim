@@ -11,7 +11,7 @@ LIM
 
 
 
-Rotues:
+## Rotues ##
 1. List all the results for a url.
 api_history_results GET  /api/histories/:history_id/results(.:format)     api/results#index {:format=>:json}
 Params:
